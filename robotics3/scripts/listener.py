@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#M1 mac上ではこのパスでないといけない
+#M1mac
 import rospy
 from std_msgs.msg import String
 
