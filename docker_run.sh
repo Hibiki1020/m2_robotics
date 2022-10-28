@@ -6,5 +6,6 @@ docker run -p 6080:80  \
     --rm \
     --shm-size=1024m \
     --privileged \
+    --name $image_tag \
     $image_name:$image_tag \
     bash -c "cd /home/ubuntu/ros_catkin_ws/src/$image_name && git pull && roscd && catkin_make && bash"
