@@ -20,7 +20,7 @@ class ROSNode:
     def pose_callback(self, data):
         self.pose_data = data
 
-        if abs(self.pose_data.x) > 9.0:
+        if abs(self.pose_data.x) > 9.0  or abs(self.pose_data.y) > 9.0:
             self.cmd_vel.linear.x = 0.1
             self.cmd_vel.angular.z = 2.0
         else:
