@@ -21,7 +21,7 @@ class ROSNode:
         self.pose_data = data
 
         if abs(self.pose_data.x) > 10.0 or abs(self.pose_data.y) > 10.0:
-            self.cmd_vel.linear.x = 2.0
+            self.cmd_vel.linear.x = 0.5
             self.cmd_vel.angular.z = 2.0
         else:
             self.cmd_vel.linear.x = 2.0
