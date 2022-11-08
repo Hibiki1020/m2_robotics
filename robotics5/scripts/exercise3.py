@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 #M1mac
 import rospy
+import math
 from std_msgs.msg import String
 from geometry_msgs.msg import Twist
 from turtlesim.msg import Pose
@@ -20,7 +21,7 @@ class ROSNode:
     def pose_callback(self, data):
         self.pose_data = data
 
-        if abs(self.pose_data.x) > 9.0  or abs(self.pose_data.y) > 9.0:
+        if math.sqrt(self.pose_data.x**2) > 9.0  or math.sqrt(self.pose_data.y**2) > 9.0:
             self.cmd_vel.linear.x = 0.3
             self.cmd_vel.angular.z = 2.0
             print("I'm at the edge!")
