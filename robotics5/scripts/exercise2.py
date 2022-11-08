@@ -6,7 +6,7 @@ from geometry_msgs.msg import Twist
 from turtlesim.msg import Pose
 
 class ROSNode:
-    def __init__():
+    def __init__(self):
         rospy.init_node('excercise2', anonymous=True)
         self.pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
         self.sub = rospy.Subscriber('/turtle1/pose', Pose, self.pose_callback)
