@@ -25,6 +25,7 @@ class ROSNode:
             self.cmd_vel.linear.x = 0.3
             self.cmd_vel.angular.z = 2.0
             print("I'm at the edge!")
+            print(self.pose_data)
         else:
             self.cmd_vel.linear.x = 1.5
             self.cmd_vel.angular.z = 0.0
