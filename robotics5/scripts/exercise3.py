@@ -21,10 +21,10 @@ class ROSNode:
         self.pose_data = data
 
         if abs(self.pose_data.x) > 9.0  or abs(self.pose_data.y) > 9.0:
-            self.cmd_vel.linear.x = 0.1
+            self.cmd_vel.linear.x = 0.5
             self.cmd_vel.angular.z = 2.0
         else:
-            self.cmd_vel.linear.x = 1.0
+            self.cmd_vel.linear.x = 1.5
             self.cmd_vel.angular.z = 0.0
 
     def spin(self):
