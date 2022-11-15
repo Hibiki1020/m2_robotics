@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="robotics6" name="timer" type="timer.py" output="screen"/>
+    <node pkg="robotics6" name="listener" type="listener.py" output="screen"/>
+</launch>
