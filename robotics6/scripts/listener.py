@@ -5,8 +5,8 @@ from std_msgs.msg import String
 
 import os
 import sys
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append('../')
+# os.chdir(os.path.dirname(os.path.abspath(__file__)))
+# sys.path.append('../')
 from robotics6 import Call_timer
 
 def callback(data):
