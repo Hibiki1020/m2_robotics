@@ -2,7 +2,7 @@
 #M1mac
 import rospy
 from std_msgs.msg import String
-from robotics6.msg import Call_timer
+from msg import Call_timer
 
 def callback(data):
     rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)
