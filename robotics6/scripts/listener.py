@@ -3,6 +3,7 @@
 import rospy
 from std_msgs.msg import String
 
+import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append('../')
 from robotics6.msg import Call_timer
