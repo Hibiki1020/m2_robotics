@@ -1,5 +1,4 @@
-*.pth
-*.pyth
 .vscode/
 __pycache__/
 *.tar.gz
+*.bag
