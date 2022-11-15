@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="turtlesim" name="turtlesim" type="turtlesim_node" output="screen"/>
+    <node pkg="robotics6" name="controller" type="robotics5_exercise3.py" output="screen"/>
+</launch>
