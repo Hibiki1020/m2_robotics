@@ -18,6 +18,8 @@ class ROSNode:
 
         self.pose_data = Pose()
 
+        self.counter = 0
+
     def pose_callback(self, data):
         self.pose_data = data
 
@@ -26,9 +28,14 @@ class ROSNode:
             self.cmd_vel.angular.z = 2.0
             #print("I'm at the edge!")
             #print(self.pose_data)
+            self.counter += 1
+            if self.counter > 10:
+                self.cmd_vel.linear.x = 0.6
+                self.cmd_vel.angular.z = 3.0
         else:
             self.cmd_vel.linear.x = 2.0
             self.cmd_vel.angular.z = 0.0
+            self.counter = 0
 
     def spin(self):
         while not rospy.is_shutdown():
