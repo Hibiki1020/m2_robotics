@@ -10,8 +10,7 @@ import os
 import sys
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append('../')
-from robotics6.msg import *
-
+from msg import *
 
 if __name__ == '__main__':
     rospy.init_node("timer", anonymous=True)
