@@ -25,7 +25,7 @@ if __name__ == '__main__':
         time_str = String()
         original_time = Call_timer()
         original_time.word = "Hello"
-        original_time.time = rospy.get_time()
+        original_time.current_time = rospy.get_time()
         pub_original.publish(original_time)
 
         now = rospy.get_time()
