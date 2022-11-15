@@ -6,8 +6,8 @@ from std_msgs.msg import String
 import os
 import sys
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append('../..')
-from robotics6.msg import Call_timer
+sys.path.append('../')
+from robotics6.msg import *
 
 def callback(data):
     rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)

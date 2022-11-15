@@ -10,7 +10,7 @@ import os
 import sys
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append('../')
-from msg import Call_timer
+from robotics6.msg import *
 
 
 if __name__ == '__main__':
