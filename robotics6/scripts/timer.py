@@ -7,6 +7,7 @@ from geometry_msgs.msg import Twist
 from turtlesim.msg import Pose
 
 import os
+import sys
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append('../')
 from robotics6.msg import Call_timer
