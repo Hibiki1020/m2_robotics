@@ -35,6 +35,9 @@ class ROSNode:
             if self.counter > 20:
                 self.cmd_vel.linear.x = 1.0
                 self.cmd_vel.angular.z = 3.0
+            if self.counter > 100:
+                self.cmd_vel.linear.x = 1.5
+                self.cmd_vel.angular.z = -3.0
         else:
             self.cmd_vel.linear.x = 2.0
             self.cmd_vel.angular.z = 0.0
