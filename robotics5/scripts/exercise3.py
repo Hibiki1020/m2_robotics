@@ -21,13 +21,13 @@ class ROSNode:
     def pose_callback(self, data):
         self.pose_data = data
 
-        if (self.pose_data.x > 9.0 or self.pose_data.x < 1.0)  or (self.pose_data.y > 9.0 or self.pose_data.y < 1.0):
-            self.cmd_vel.linear.x = 0.3
+        if (self.pose_data.x > 9.5 or self.pose_data.x < 1.0)  or (self.pose_data.y > 9.5 or self.pose_data.y < 1.0):
+            self.cmd_vel.linear.x = 0.2
             self.cmd_vel.angular.z = 2.0
             print("I'm at the edge!")
             print(self.pose_data)
         else:
-            self.cmd_vel.linear.x = 1.5
+            self.cmd_vel.linear.x = 2.0
             self.cmd_vel.angular.z = 0.0
 
     def spin(self):
