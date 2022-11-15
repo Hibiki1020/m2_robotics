@@ -1,0 +1,2 @@
+string word
+float64 current_time
