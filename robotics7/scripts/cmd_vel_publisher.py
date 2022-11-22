@@ -15,6 +15,7 @@ class ROSNode:
 
         self.cmd_vel = Twist()
         self.cmd_vel.linear.x = 2.0
+        self.cmd_vel.angular.z = 1.0
 
         # self.pose_data = Pose()
 
