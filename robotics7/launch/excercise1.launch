@@ -1,4 +1,4 @@
 <launch>
     <node pkg="robotics7" name="cmd_vel_publisher" type="cmd_vel_publisher.py" output="screen"/>
-    <node pkg="stage_ros" name="stage_ros" type="stage_ros" args="$(rospack find stage_ros)/world/willow-erratic.world"/>
+    <node pkg="stage_ros" name="stageros" type="stageros" args="$(rospack find stage_ros)/world/willow-erratic.world"/>
 </launch>
