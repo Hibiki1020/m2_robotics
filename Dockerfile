@@ -33,7 +33,7 @@ RUN cd /home/ubuntu/ros_catkin_ws/src && \
         git clone https://github.com/Hibiki1020/m2_robotics.git && \
 		git clone https://github.com/yuu31/stage_costom.git && \
         cd /home/ubuntu/ros_catkin_ws && \
-		/bin/bash -c "source /opt/ros/noetic/setup.bash; catkin build"
+		/bin/bash -c "source /opt/ros/noetic/setup.bash; catkin_make"
 
 
 WORKDIR /home/ros_catkin_ws/
