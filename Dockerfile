@@ -1,11 +1,23 @@
 FROM tiryoh/ros-desktop-vnc:noetic
 
+
+## Timezone
+RUN RUN apt-get update && apt-get install -y locales && \
+    locale-gen en_US en_US.UTF-8 && \
+    update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 && \
+    export LANG=en_US.UTF-8
+
+##### UTC #####
+ENV TZ=Asia/Tokyo
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 RUN apt-get update && apt-get install -y \
 	vim \
 	wget \
 	unzip \
 	git \
-	build-essential
+	build-essential \
+	tmux
 
 RUN git config --global user.name “Hibiki1020” && \
     git config --global user.email “hibikijitaku@gmail.com”
