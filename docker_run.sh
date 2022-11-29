@@ -4,7 +4,7 @@ image_tag='mac'
 
 docker run -p 6080:80  \
     --rm \
-    --shm-size=3016m \
+    --shm-size=2048m \
     --privileged \
     --name $image_name \
     $image_name:$image_tag \
