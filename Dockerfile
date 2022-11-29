@@ -26,11 +26,14 @@ RUN echo "function cmk(){\n	lastpwd=\$OLDPWD \n	cpath=\$(pwd) \n cd /home/ubuntu
 ##### NO cache #####
 ARG CACHEBUST=1
 
+RUN apt-get install -y ros-noetic-teleop-twist-keyboard ros-noetic-gmapping ros-noetic-map-server ros-noetic-amcl ros-noetic-move-base
+
 RUN cd /home/ubuntu/ros_catkin_ws/src && \
 		cd /home/ubuntu/ros_catkin_ws/src && \
         git clone https://github.com/Hibiki1020/m2_robotics.git && \
+		git clone https://github.com/yuu31/stage_costom.git && \
         cd /home/ubuntu/ros_catkin_ws && \
-		/bin/bash -c "source /opt/ros/noetic/setup.bash; catkin_make"
+		/bin/bash -c "source /opt/ros/noetic/setup.bash; catkin build"
 
 
 WORKDIR /home/ros_catkin_ws/
