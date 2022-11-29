@@ -3,5 +3,4 @@ __pycache__/
 *.tar.gz
 *.tgz
 *.bag
-*.pgm
 *.world
