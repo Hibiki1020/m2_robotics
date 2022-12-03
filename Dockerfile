@@ -19,9 +19,6 @@ RUN apt-get update && apt-get install -y \
 	build-essential \
 	tmux
 
-RUN git config --global user.name “Hibiki1020” && \
-    git config --global user.email “hibikijitaku@gmail.com”
-
 ########## ROS setup ##########
 RUN mkdir -p /home/ubuntu/ros_catkin_ws/src && \
 	cd /home/ubuntu/ros_catkin_ws/src && \
