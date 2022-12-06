@@ -1,4 +1,4 @@
-<include file="$(find robotics9)/launch/navigation.launch"/>
 <launch>
     <node pkg="robotics9" type="excercise2" name="excercise2" output="screen"/>
+    <include file="$(find robotics9)/launch/navigation.launch"/>
 </launch>
