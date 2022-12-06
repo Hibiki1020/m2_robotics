@@ -20,9 +20,9 @@
         <remap from="odom" to="/odom" />
     </node> -->
     <!--AMCL-->
-    <node pkg="map_server" type="map_server" name="map_server" args="$(find robotics8)/map/map.yaml">
+    <!-- <node pkg="map_server" type="map_server" name="map_server" args="$(find robotics8)/map/map.yaml">
         <param name="frame_id" value="/map"/>
-    </node>
+    </node> -->
     <node pkg="amcl" type="amcl" name="amcl" output="screen">
     <!-- Publish scans from best pose at a max of 10 Hz -->
     <param name="odom_model_type" value="diff"/>
