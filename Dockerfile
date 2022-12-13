@@ -44,5 +44,8 @@ RUN cd /home/ubuntu/ros_catkin_ws/src && \
         cd /home/ubuntu/ros_catkin_ws && \
 		/bin/bash -c "source /opt/ros/noetic/setup.bash; catkin_make"
 
+RUN echo "export ROS_IP=127.0.0.1" >> ~/.bashrc && \
+	echo "export ROS_MASTER_URI=http://127.0.0.1:11311" >> ~/.bashrc && \
+	source ~/.bashrc
 
 WORKDIR /home/ros_catkin_ws/
