@@ -1,0 +1,17 @@
+<launch>
+    <node name="turtlesim" pkg="turtlesim" type="turtlesim_node" output="screen"/>
+    <node name="teleop" pkg="turtlesim" type="turtle_teleop_key" output="screen"/>
+
+    <node name="turtle1_tf2_broadcaster" pkg="robotics12" type="tf2_broadcaster.py" output="screen">
+        <param name="turtle" value="turtle1"/>
+    </node>
+
+    <node name="turtle2_tf2_broadcaster" pkg="robotics12" type="tf2_broadcaster.py" output="screen">
+        <param name="turtle" value="turtle2"/>
+    </node>
+
+    <node name="listener" pkg="robotics12" type="tf2_listener.py" output="screen"/>
+
+    <node name="fixed_broadcaster" pkg="robotics12" type="fixed_tf2broadcaster.py" output="screen" />
+
+</launch>
